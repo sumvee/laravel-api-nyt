@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    'nyt' => [
+        'api_key' => env('NYT_API_KEY'),
+        'base_uri' => env('NYT_BASE_URI', 'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json'),
+        'api_rate_limit' => (int) env('API_RATE_LIMIT_PER_MINUTE', 60),
+        'cache_minutes' => (int) env('NYT_CACHE_MINUTES', 10),
+    ],
+
 ];
